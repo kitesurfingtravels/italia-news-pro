@@ -522,7 +522,7 @@ function NewsCard({ article, onSelect }) {
 // ============================================
 
 function DetailModal({ article, onClose }) {
-  const ratingService = new CommunityRatingService();
+  // const ratingService = new CommunityRatingService();
   
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-end md:items-center justify-center p-0 md:p-4">
@@ -673,7 +673,7 @@ let allArticles = response.data.articles.map(article => ({
   
   useEffect(() => {
     fetchNews(searchQuery);
-  }, [activeCategory, trustFilter]);
+  }, [activeCategory, trustFilter, searchQuery]); // [activeCategory, trustFilter]);
   
   return (
     <div className="min-h-screen bg-gray-50">
